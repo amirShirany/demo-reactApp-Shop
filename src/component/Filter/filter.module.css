@@ -1,0 +1,20 @@
+/** @format */
+
+.filter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 50rem;
+	margin: 20px 0;
+}
+.select {
+	width: 10rem;
+}
+
+.selectContainer {
+	display: flex;
+	align-items: center;
+}
+.selectContainer span {
+	display: inline-block;
+}

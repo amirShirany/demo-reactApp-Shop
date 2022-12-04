@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+/** @format */
+import React from 'react';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+import ProductList from './component/ProductList/ProductList';
+import NavBar from './component/NavBar/NavBar';
+import Filter from './component/Filter/Filter';
+import ProductsProvider from './component/Provider/ProductsProvider';
+import Wrapper from './component/hoc/Wrapper';
+const App = (props) => {
+	// state = [{ ... }];
+	// handler => state
+	return (
+		<>
+			<ProductsProvider>
+				<NavBar />
+				<Filter />
+				<ProductList />
+			</ProductsProvider>
+		</>
+	);
+};
+export default Wrapper(App, 'container');

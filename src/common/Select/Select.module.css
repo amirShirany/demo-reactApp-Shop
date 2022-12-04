@@ -1,0 +1,12 @@
+/** @format */
+.select {
+	width: 10rem;
+}
+
+.selectContainer {
+	display: flex;
+	align-items: center;
+}
+.selectContainer span {
+	display: inline-block;
+}
